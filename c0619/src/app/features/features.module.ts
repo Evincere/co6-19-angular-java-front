@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AdministratorModule } from './administrator/administrator.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -10,9 +11,10 @@ import { AuthModule } from './auth/auth.module';
   declarations: [],
   imports: [
     CommonModule,
+    AppRoutingModule,
     AdministratorModule,
     UserModule,
-    AuthModule
+    AuthModule,
   ]
 })
 export class FeaturesModule { }
