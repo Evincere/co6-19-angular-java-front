@@ -1,4 +1,48 @@
-<p>login works!</p>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere incidunt harum
-soluta. Illo asperiores optio quod voluptatum at repellat, consequatur eveniet
-nostrum voluptatem quo adipisci minus ipsa maiores inventore nesciunt?
+<div class="container-fluid p-3">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center mt-5">Inicio de sesión</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email" class="my-2">Correo electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            formControlName="email"
+            placeholder="Ingrese aquí su e-mail"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="my-2">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            formControlName="password"
+            placeholder="Ingrese aquí su contraseña"
+          />
+        </div>
+        <div class="d-grid gap-2 mt-3 mx-auto">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!loginForm.valid"
+          >
+            Iniciar sesión
+          </button>
+          <button class="btn btn-primary" type="button">
+            ¿Olvidó su contraseña?
+          </button>
+          <button class="btn btn-primary" type="button">
+            Regístrate aquí si aún no tienes cuenta
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
