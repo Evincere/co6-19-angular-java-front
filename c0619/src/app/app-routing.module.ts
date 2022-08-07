@@ -13,6 +13,11 @@ const routes: Routes = [
   {
     path: "administrador",
     loadChildren: () => import('./features/administrator/administrator.module').then(m => m.AdministratorModule)
+  },
+  {
+    path: "**",
+    redirectTo: "",
+    pathMatch: "full"
   }
 ];
 
